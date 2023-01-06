@@ -1,0 +1,20 @@
+[workspace]
+members = [
+    "libs/pigeonhole-metadata",
+    "libs/pigeonhole-nominatim",
+
+    "metadata-app",
+]
+
+[workspace.dependencies]
+pigeonhole-metadata = { path = "libs/pigeonhole-metadata" }
+pigeonhole-nominatim = { path = "libs/pigeonhole-nominatim" }
+
+async-trait = "0.1.60"
+anyhow = "1.0.68"
+structopt = { version = "0.3.26", features = ["paw"] }
+tokio = { version = "1.24.0", features = ["full"] }
+kamadak-exif = "0.5.5"
+thiserror = "1.0.38"
+nominatim = { git = "https://github.com/samuelsleight/nominatim-rs" }
+reqwest = "0.11.13"
